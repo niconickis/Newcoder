@@ -17,10 +17,10 @@ import java.util.Date;
 @Component//没听懂为啥要加component...
 //现在是想在调用IndexController和SettingController之前调用 beforeMethod ；之后都调用afterMethod
 public class LogAspect {
-    private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);
+    private static final Logger logger = LoggerFactory.getLogger(LogAspect.class);//返回该类的一个日志记录logger
 
     @Before("execution(* com.nowcoder.controller.*Controller.*(..))")//第一个*表示两个controller的返回值；com.nowcoder.controller表示包的位置；*Controller表示所有的controller
-    public void beforeMethod(JoinPoint joinPoint) {                  //*(..)表示某个Controller的所有方法
+    public void beforeMethod(JoinPoint joinPoint) {                                //*(..)表示某个Controller的所有方法
         StringBuilder sb = new StringBuilder();
         for (Object arg : joinPoint.getArgs()) {
             sb.append("arg:" + arg.toString() + "|");

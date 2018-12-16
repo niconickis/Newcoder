@@ -30,10 +30,11 @@ public class IndexController { //该类表示的首页的controller
     WendaService wendaService;  
 
     @RequestMapping(path = {"/", "/index"}, method = {RequestMethod.GET})//表示首页的路径
-    @ResponseBody//表示的是返回给用户的的直接是个字符串，而不是templates中的模板；如果返回的是个模板，则需要将ResponseBody注释掉然后返回的对象会在template中寻找
+    //@ResponseBody//表示的是返回给用户的的直接是个字符串，而不是templates中的模板；如果返回的是个模板，则需要将ResponseBody注释掉然后返回的对象会在template中寻找
     public String index(HttpSession httpSession) {
         logger.info("VISIT HOME");
-        return wendaService.getMessage(2) + "Hello NowCoder" + httpSession.getAttribute("msg");//访问RequestMapping中的地址，就返回该字符串
+        return "index";
+        // return wendaService.getMessage(2) + "Hello NowCoder" + httpSession.getAttribute("msg");//访问RequestMapping中的地址，就返回该字符串
     }
 
     //url中參數的解析
