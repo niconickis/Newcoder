@@ -1,0 +1,11 @@
+{
+    "configurations": [
+        {
+            "type": "java",
+            "name": "CodeLens (Launch) - WendaApplication",
+            "request": "launch",
+            "mainClass": "com.nowcoder.WendaApplication",
+            "projectName": "wenda"
+        }
+    ]
+}
