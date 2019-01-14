@@ -1,0 +1,5 @@
+{
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "python.pythonPath": "C:\\ProgramData\\Anaconda3\\envs\\Mypython2.7\\python.exe",
+    "python.linting.pylintEnabled": true
+}
